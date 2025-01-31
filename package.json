@@ -46,7 +46,7 @@
 	"webExt": {
 	  "sourceDir": "distribution",
 	  "run": {
-		"startUrl": ["https://github.com/smartbrowser-plugin"]
+		"startUrl": ["https://github.com/hakikicode/browser-extension-template"]
 	  }
 	}
   }
