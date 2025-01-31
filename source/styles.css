@@ -1,0 +1,87 @@
+#text-notice {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	padding: 10px;
+	background: #fff;
+	z-index: 999999;
+}
+/* General body and font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+/* Header styling */
+h1 {
+    font-size: 22px;
+    color: #5607ea;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for stats */
+#reward-stats, #contribution-stats {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Button styling */
+.button {
+    background-color: #5607ea;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #4406b5;
+}
+
+#connect-wallet {
+    background-color: #4CAF50;
+}
+
+#connect-wallet:hover {
+    background-color: #45a049;
+}
+
+#view-dashboard {
+    background-color: #00aaff;
+}
+
+#view-dashboard:hover {
+    background-color: #0077cc;
+}
+
+/* Add padding to make it look better */
+.popup-content {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Wallet connection status styling */
+#wallet-status {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-align: center;
+}
+

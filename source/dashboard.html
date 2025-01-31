@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Plugin Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Smart Plugin Dashboard</h2>
+    <p>Connected Wallet: <span id="walletAddress">Not Connected</span></p>
+    <p>Total Contributions: <span id="contributions">0</span></p>
+    <p>Total Rewards: <span id="rewards">0 Koii</span></p>
+    <canvas id="rewardChart"></canvas>
+
+    <script>
+        async function updateDashboard() {
+            chrome.storage.local.get(["walletAddress", "rewards", "contributions"], (data) => {
+                document.getElementById("walletAddress").innerText = data.walletAddress || "Not Connected";
+                document.getElementById("rewards").innerText = data.rewards || 0;
+                document.getElementById("contributions").innerText = data.contributions || 0;
+
+                // Update Chart
+                const ctx = document.getElementById('rewardChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Contributions', 'Rewards'],
+                        datasets: [{
+                            label: 'User Stats',
+                            data: [data.contributions || 0, data.rewards || 0],
+                            backgroundColor: ['blue', 'green']
+                        }]
+                    }
+                });
+            });
+        }
+
+        updateDashboard();
+    </script>
+</body>
+</html>

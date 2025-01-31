@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Browser Plugin</title>
+  <script src="https://unpkg.com/@_koii/sdk/web.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Smart Browser Plugin</h1>
+  <div id="wallet-status">Wallet Status: Not Connected</div>
+  <button id="connect-wallet" class="button">Connect Wallet</button>
+  
+  <h2>Your Stats</h2>
+  <div id="reward-stats">Rewards: 0 Koii</div>
+  <div id="contribution-stats">Contributions: 0</div>
+
+  <button id="claim-rewards" class="button">Claim Rewards</button>
+
+  <a href="dashboard.html" id="view-dashboard">View Dashboard</a>
+</body>
+<script type="module" src="popup.js"></script>
+</html>
